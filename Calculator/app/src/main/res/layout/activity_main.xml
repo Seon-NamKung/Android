@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mskir.calculator.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, Android!"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal"
+        tools:layout_editor_absoluteY="3dp"
+        tools:layout_editor_absoluteX="4dp" />
+
+    <Button
+        android:id="@+id/apple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="사과 가격 계산하기"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteY="44dp"
+        tools:layout_editor_absoluteX="4dp" />
+    <Button
+        android:id="@+id/age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="나이 계산기" />
+
+    <Button
+        android:id="@+id/teperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="온도 계산기" />
+
+    <Button
+        android:id="@+id/restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="레스토랑 계산기"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteY="44dp"
+        tools:layout_editor_absoluteX="4dp" />
+
+    <Button
+        android:id="@+id/calculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="계산기" />
+
+</LinearLayout>

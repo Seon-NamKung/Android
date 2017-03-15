@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mskir.calculator.Main3Activity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.00"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:text="피자(15000원)" />
+
+        <EditText
+            android:layout_gravity="right"
+            android:id="@+id/pizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:hint="개수 입력"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="스파게티(13000원)"
+            android:textSize="20dp"
+            android:gravity="center_vertical"
+            android:layout_weight="0.99"
+            />
+
+        <EditText
+            android:layout_gravity="right"
+            android:id="@+id/pasta"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:hint="개수 입력"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="샐러드(9000원)"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/salad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:hint="개수 입력" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/membership"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="멤버쉽 카드 있음(10%할인)" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/somthing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주문개수"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/number"
+            android:gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0개"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주문금액"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:gravity="right"
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0원"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+</LinearLayout>
