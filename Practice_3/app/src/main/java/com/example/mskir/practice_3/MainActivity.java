@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 total.setText("0");
                 average.setText("0");
                 grade.setImageResource(0);
-                Toast.makeText(getApplicationContext(),"초기화 되었습니다.",Toast.LENGTH_SHORT);
+                Toast.makeText(getApplicationContext(),"초기화 되었습니다.",Toast.LENGTH_SHORT).show();
             }
         });
     }
