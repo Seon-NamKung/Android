@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mskir.restaurant.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="bottom"
+        android:text="레스토랑을 시작하려면 아래를 클릭하세요."
+        android:layout_marginLeft="15dp" />
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Switch
+            android:layout_marginLeft="15dp"
+            android:id="@+id/startSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시작함" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/passTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:text="예약시간 경과시간 : "
+            android:textColor="#0000ff"/>
+
+        <Chronometer
+            android:visibility="invisible"
+            android:id="@+id/chronometer"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#0000ff"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dateLayout"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="380dp"
+        android:background="#FFCCCC"
+        android:layout_gravity="center_horizontal"
+        >
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleY="0.9"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="380dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFCCCC"
+        android:visibility="gone">
+        <TimePicker
+            android:visibility="visible"
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/numOfPeople"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:stretchColumns="*"
+        android:background="#FFCCCC">
+        <TableRow>
+            <TextView
+                android:textSize="20dp"
+                android:text="성인"
+                android:textColor="#000000"/>
+            <EditText
+                android:id="@+id/adults"
+                android:hint="인원 수"
+                android:inputType="number"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="10dp">
+            <TextView
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:text="청소년"/>
+            <EditText
+                android:id="@+id/teenager"
+                android:hint="인원 수"
+                android:inputType="number"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="10dp">
+            <TextView
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:text="어린이"/>
+            <EditText
+                android:id="@+id/kids"
+                android:hint="인원 수"
+                android:inputType="number"/>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/result"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="#FFCCCC">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp"
+            android:layout_margin="5dp"
+            android:background="#ffffff"
+            android:stretchColumns="*">
+            <TextView
+                android:text="예약 결과는 다음과 같습니다."
+                android:gravity="center_horizontal"
+                android:textSize="20dp"
+                android:textColor="#0000ff"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+            <TableRow
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:text="날짜 : "/>
+                <TextView
+                    android:id="@+id/date" />
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:text="시간 : "/>
+                <TextView
+                    android:id="@+id/time"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:text="성인 : "/>
+                <TextView
+                    android:id="@+id/numOfAdults"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:text="청소년 : "/>
+                <TextView
+                    android:id="@+id/numOfTeens"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:text="어린이 : "/>
+                <TextView
+                    android:id="@+id/numOfKids"/>
+            </TableRow>
+            <TextView
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="예약되었습니다."/>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/pageButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:stretchColumns="*">
+        <TableRow
+            android:layout_margin="10dp">
+                <Button
+                    android:id="@+id/before"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="이전" />
+
+                <Button
+                    android:id="@+id/after"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="다음" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

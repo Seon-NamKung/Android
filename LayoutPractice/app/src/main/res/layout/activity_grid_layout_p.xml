@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mskir.layoutpractice.GridLayout_p">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#777777"
+        android:rowCount="3"
+        android:columnCount="3"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <Button
+            android:layout_gravity="fill"
+            android:layout_rowSpan="2"
+            android:text="1"/>
+        <Button
+            android:text="3"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"/>
+        <Button
+            android:layout_row="1"
+            android:layout_column="1"
+            android:text="4"/>
+        <Button
+            android:text="2"
+            android:layout_row="2"
+            android:layout_column="0"/>
+        <Button
+            android:text="5"
+            android:layout_row="2"
+            android:layout_column="1"/>
+        <Button
+            android:text="6"
+            android:layout_row="1"
+            android:layout_column="2"/>
+        <Button
+            android:text="7"
+            android:layout_row="2"
+            android:layout_column="2"/>
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>
