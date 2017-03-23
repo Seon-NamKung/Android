@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainlayout"
+    tools:context="com.example.mskir.variousmenu.MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_gravity ="center_horizontal|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:src="@drawable/spagetti"/>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/text"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:text="겁나 맛있는 치킨"/>
+
+</FrameLayout>

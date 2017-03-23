@@ -90,6 +90,7 @@
         <TableRow>
             <TextView
                 android:textSize="20dp"
+
                 android:text="성인"
                 android:textColor="#000000"/>
             <EditText
