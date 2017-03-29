@@ -1,6 +1,7 @@
 package com.example.mskir.variousmenu;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -47,6 +48,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
 
         switch(item.getItemId()){
+            case R.id.switchActivity:
+                Intent intent = new Intent(MainActivity.this,tabHost.class);
+                startActivity(intent);
+                break;
             case R.id.red:
                 main.setBackgroundColor(Color.RED);
                 break;
