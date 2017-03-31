@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class FragmentActivity extends AppCompatActivity {
-    private boolean exmaple2 = true;
+    private boolean isexmaple2 = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,30 @@ public class FragmentActivity extends AppCompatActivity {
         fragmentTransaction.add(R.id.framelayout,new ExampleFragment2());
         fragmentTransaction.commit();
 
+        Button button = (Button)findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switchFragment();
+            }
+        });
+
     }
 
+    public void switchFragment(){
+        Fragment fr;
+
+        if(isexmaple2){
+            fr = new ExampleFragment2();
+        }else{
+            fr = new ExampleFragment();
+        }
+
+        isexmaple2 = (isexmaple2) ? false : true;
+
+        FragmentManager fx = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fx.beginTransaction();
+        fragmentTransaction.add(R.id.framelayout,fr);
+        fragmentTransaction.commit();
+    }
 }
