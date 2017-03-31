@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class alertAcitivy extends AppCompatActivity {
@@ -82,13 +83,27 @@ public class alertAcitivy extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         String str = "";
                         for(int i = 0; i<checked.length;i++){
-                            if(checked[i]){
-                                str = str + ","+checkstr[i];
+                            if(checked[i]) {
+                                str = str + "," + checkstr[i];
                             }
-                            Toast.makeText(getApplicationContext(),str,Toast.LENGTH_SHORT).show();
                         }
+                        Toast.makeText(getApplicationContext(),str,Toast.LENGTH_SHORT).show();
                     }
                 });
+                dlg.show();
+            }
+        });
+
+        custom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View dlgview = View.inflate(alertAcitivy.this, R.layout.dialog,null);
+                final EditText editText = (EditText)dlgview.findViewById(R.id.editText);
+
+                AlertDialog.Builder dlg = new AlertDialog.Builder(alertAcitivy.this);
+                dlg.setPositiveButton("확인",null);
+                dlg.setTitle("사용자 정의 대화상자");
+                dlg.setView(dlgview);
                 dlg.show();
             }
         });
