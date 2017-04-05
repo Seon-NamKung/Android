@@ -1,7 +1,7 @@
-package com.example.mskir.fragmenthw;
+package com.example.mskir.fragmenttask;
 
 /**
- * Created by mskir on 2017-04-05.
+ * Created by mskir on 2017-04-06.
  */
 
 public class Information {
@@ -71,12 +71,27 @@ public class Information {
         this.membership = membership;
     }
 
-    public int getMembership(){
-        return this.membership;
+    public String getMembership(){
+        if(membership == 0){
+            return "No";
+        }
+        else if(membership == 1){
+            return "Normal";
+        }else{
+            return "VIP";
+        }
+
     }
 
     public int getCost(){
-        return (costSpagetti * spagetti + costPizza * pizza);
+        if(membership == 0){
+            return (costSpagetti * spagetti + costPizza * pizza);
+        }
+        else if(membership == 1){
+            return (costSpagetti * spagetti + costPizza * pizza)*9/10;
+        }else{
+            return (costSpagetti * spagetti + costPizza * pizza)*7/10;
+        }
     }
 
     public void clearAll(){
@@ -86,6 +101,4 @@ public class Information {
         pizza = 0;
         membership = 0;
     }
-
-
 }

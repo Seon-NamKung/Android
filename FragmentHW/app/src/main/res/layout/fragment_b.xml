@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_b">
+    <TableRow
+        android:layout_margin="8dp">
+        <TextView
+            android:text="테이블명" />
+        <TextView
+            android:id="@+id/tableName"
+            android:text=""/>
+    </TableRow>
 
-</LinearLayout>
+    <TableRow
+        android:layout_margin="8dp">
+        <TextView
+            android:text="입장시간"/>
+        <TextView
+            android:id="@+id/entranceTime"
+            android:text=""/>
+    </TableRow>
+
+    <TableRow
+        android:layout_margin="8dp">
+        <TextView
+            android:text="스파게티"/>
+        <TextView
+            android:id="@+id/l_spagetti"
+            android:text=""/>
+    </TableRow>
+
+    <TableRow
+        android:layout_margin="8dp">
+        <TextView
+            android:text="피자"/>
+        <TextView
+            android:id="@+id/l_pizza"
+            android:text=""/>
+    </TableRow>
+
+    <TableRow
+        android:layout_margin="8dp">
+        <TextView
+            android:text="멤버쉽카드"/>
+        <TextView
+            android:id="@+id/l_membership"
+            android:text=""/>
+    </TableRow>
+
+    <TableRow
+        android:layout_margin="8dp">
+        <TextView
+            android:text="가격"/>
+        <TextView
+            android:id="@+id/price"
+            android:text=""/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/newOrder"
+            android:text="새주문"/>
+        <Button
+            android:id="@+id/editInfo"
+            android:text="정보수정"/>
+        <Button
+            android:id="@+id/reset"
+            android:text="초기화"/>
+    </TableRow>
+
+</TableLayout>
