@@ -29,6 +29,8 @@ public class FragmentActivity extends AppCompatActivity {
             }
         });
 
+        ExampleFragment fragment = (ExampleFragment)getSupportFragmentManager().findFragmentById(R.id.fragment1);
+
     }
 
     public void switchFragment(){
