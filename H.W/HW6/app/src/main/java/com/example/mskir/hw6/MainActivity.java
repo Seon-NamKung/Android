@@ -36,16 +36,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initListView();
 
-        SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        String time = sdfNow.format(new Date(System.currentTimeMillis()));
-
-        String[] forTest = {"a","b","c"};
-        Data testData = new Data("호식이","01099889131",forTest,"www.naver.com",time,"피자");
-        dataList.add(testData.getName());
-        instanceList.add(testData);
-        adapter.notifyDataSetChanged();
-        tv.setText("맛집 리스트(" + dataList.size() + "개)");
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
