@@ -65,6 +65,8 @@ public class AddFruit extends LinearLayout implements View.OnClickListener {
        }
        else{
            onAddListener.onAdd(et.getText().toString(),imglist[imageno],f_price.getText().toString());
+           et.setText(null);
+           f_price.setText(null);
        }
     }
 
