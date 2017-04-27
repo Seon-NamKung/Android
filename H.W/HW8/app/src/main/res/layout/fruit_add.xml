@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ff0"
+    android:padding="10dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow>
+    <TextView
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="과일이름:" />
+
+    <AutoCompleteTextView
+        android:completionThreshold="2"
+        android:layout_marginRight="20dp"
+        android:padding="5dp"
+        android:background="#fff"
+        android:id="@+id/f_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow
+            android:visibility="visible"
+            android:id="@+id/tr_price"
+            android:layout_marginTop="4dp">
+            <TextView
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="과일가격:" />
+
+            <AutoCompleteTextView
+                android:completionThreshold="2"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
+                android:background="#fff"
+                android:id="@+id/f_price"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="52dp"
+        android:layout_height="53dp"
+        app:srcCompat="@drawable/abocado" />
+
+    <Button
+        android:id="@+id/b_next"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_media_ff" />
+
+    <Button
+        android:text="ADD"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_add"
+        />
+    <Button
+        android:visibility="gone"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="M"
+        android:id="@+id/b_modify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
