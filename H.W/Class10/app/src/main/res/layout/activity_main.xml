@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mskir.class10.MainActivity">
+
+    <Button
+        android:onClick="onclick"
+        android:id="@+id/bt_1"
+        android:text="내부 메모리에 읽기"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="onclick"
+        android:id="@+id/bt_2"
+        android:text="내부 메모리에 쓰기"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="onclick"
+        android:id="@+id/bt_3"
+        android:text="RAW폴더에서 파일 읽기"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="onclick"
+        android:id="@+id/bt_4"
+        android:text="외부 메모리에 읽기"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="onclick"
+        android:id="@+id/bt_5"
+        android:text="외부 메모리에 쓰기"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="onclick"
+        android:id="@+id/bt_6"
+        android:text="디렉터리 생성"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="onclick"
+        android:id="@+id/bt_7"
+        android:text="디렉터리 파일 목록"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
