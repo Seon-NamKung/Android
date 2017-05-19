@@ -88,13 +88,13 @@ public class MyCanvas extends View {
                 0,0,2,0,-25f,
                 0,0,0,2,0
         };
-        img = BitmapFactory.decodeResource(getResources(),R.drawable.pen);
+        img = BitmapFactory.decodeResource(getResources(),R.drawable.icon);
         bigimg = Bitmap.createScaledBitmap(img,img.getWidth()*3/2,img.getHeight()*3/2,false);
         if(blur) {
             BlurMaskFilter blur = new BlurMaskFilter(1000, BlurMaskFilter.Blur.NORMAL); // NORMAL,INNER,OUTER,SOLID
             mPaint.setMaskFilter(blur);
         }else{
-            mPaint.setMaskFilter(null);
+            mPaint = new Paint();
         }
 
         if(color){
