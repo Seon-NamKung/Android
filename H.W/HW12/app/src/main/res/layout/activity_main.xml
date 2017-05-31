@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mskir.hw12.MainActivity">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="#ffa9a9"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:text="메뉴 이미지 변경 간격(초)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/second"
+            android:layout_marginLeft="10dp"
+            android:background="#ffffff"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/init"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick"
+            android:text="처음으로"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/image"
+            android:textSize="30dp"
+            android:text="오늘 뭐 먹을까?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:onClick="onClick"
+            android:id="@+id/image"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/image"
+            android:text="NULL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>
